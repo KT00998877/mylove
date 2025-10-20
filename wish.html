@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thiệp Chúc Mừng 20/10 💌</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* 🌸 Nền lung linh, mềm mại */
+        body {
+            background: linear-gradient(rgba(255, 192, 203, 0.4),
+                    rgba(255, 105, 180, 0.4)),
+                url('https://innhanhsieuviet.com/wp-content/uploads/2024/09/thiep-chuc-mung-ngay-phu-nu-viet-nam-20-10-2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+            color: #4a1c40;
+            overflow: hidden;
+        }
+
+        /* 💌 Hộp thiệp */
+        .card {
+            width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            box-shadow: 0 8px 25px rgba(255, 105, 180, 0.3);
+            padding: 40px 45px;
+            text-align: center;
+            position: relative;
+            animation: fadeIn 1.5s ease-out;
+            backdrop-filter: blur(6px);
+        }
+
+        /* 💕 Tiêu đề */
+        .card h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.2rem;
+            color: #e91e63;
+            text-shadow: 2px 2px 6px rgba(233, 30, 99, 0.3);
+            margin-bottom: 20px;
+            animation: heartBeat 2s infinite;
+        }
+
+        /* ✨ Nội dung */
+        .card p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+            color: #6d214f;
+        }
+
+        /* 💖 Hiệu ứng trái tim bay */
+        .heart {
+            position: absolute;
+            color: #ff3366;
+            font-size: 20px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.8;
+        }
+
+        /* 🎞️ Hiệu ứng */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes heartBeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(1);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-600px) scale(1.5);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h1>Dear My Love 💖💖💖</h1>
+        <p>Chúc em ngày <b>20/10</b> thật vui vẻ, xinh đẹp và tràn đầy hạnh phúc 💖💖💖</p>
+        <p>Hôm nay anh gửi tấm thiệp nhỏ này, mong rằng khi em đọc được sẽ thấy vui 💞</p>
+        <p>Cảm ơn em vì đã đến bên anh, là bông hoa đẹp nhất trong cuộc đời anh 🌹</p>
+    </div>
+
+    <!-- 🌸 Tạo trái tim bay -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.textContent = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (3 + Math.random() * 3) + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 6000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+</body>
+
+</html>
