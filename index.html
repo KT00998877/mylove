@@ -44,7 +44,7 @@
 <body>
     <div class="card">
         <div class="mb-3">
-            <label class="form-label">Họ và tên (Không dấu):</label>
+            <label class="form-label">Họ và tên (Không dấu - có khoảng trắng):</label>
             <input type="text" id="name" class="form-control" placeholder="Nhập họ và tên">
         </div>
 
@@ -96,7 +96,7 @@
             if (isNameMatch && isDateMatch) {
                 window.location.href = "wish.html"; // chuyển trang
             } else {
-                result.textContent = "❌ Sai tên hoặc ngày sinh!";
+                result.textContent = "Toi khong biet bạn là ai!";
                 result.className = "text-danger text-center mt-3";
             }
         }
